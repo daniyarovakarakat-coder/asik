@@ -1,0 +1,193 @@
+/* ========== GLOBAL ========== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(to right, #f5f5f6, #c1d2e9);
+  color: #222;
+}
+
+/* ========== NAVBAR (shared) ========== */
+.navbar {
+  background: #222;
+  overflow: hidden;
+  text-align: center;
+  padding: 0;
+}
+.navbar .brand {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+.navbar ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.navbar li { display: inline-block; }
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+.navbar a:hover { background: lightblue; color: #000; }
+.navbar a.active { background: #d5e5f7; color: #fff; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #4c6580;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn:hover { background: #25303d; }
+
+/* ========== TASK 1 PAGE (float layout) ========== */
+/* Apply when <body class="t1-page"> */
+.t1-page .header {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.t1-page .navbar { background: rgb(30, 30, 37); }
+.t1-page .sidebar {
+  float: left;
+  width: 25%;
+  background: #f0f0f0;
+  padding: 15px;
+  min-height: 200px;
+  border: 1px solid #ccc;
+}
+.t1-page .content {
+  float: right;
+  width: 70%;
+  background: #fafafa;
+  padding: 15px;
+  min-height: 200px;
+  border: 1px solid #ccc;
+}
+.t1-page .footer {
+  clear: both;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.t1-page .page-wrap { padding-bottom: 60px; } 
+
+/* ========== CARD PAGES (Task 2 & Task 3) ========== */
+/* Apply when <body class="card-page"> */
+.card-page header {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.card-page .content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.card-page img {
+  display: block;
+  max-width: 320px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 5px gray;
+}
+.card-page ol,
+.card-page ul { margin: 10px 0 20px 40px; }
+
+/* Table (Task 3) */
+.card-page #grades-heading {
+  text-align: center;
+  margin: 4px 0 16px;
+  color: #333;
+}
+.card-page .grades-table {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 12px;
+  border-collapse: collapse;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.card-page .grades-table th,
+.card-page .grades-table td {
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+}
+.card-page .grades-table thead th { background: #203c5b; color: #fff; }
+.card-page .grades-table tbody tr:nth-child(even) { background: #f9f9f9; }
+.card-page .highlight-row { background: #ffe7bf; }
+
+/* Form (Task 3) */
+.card-page #feedback-form {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  background: #f2f5f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.card-page #feedback-form label {
+  font-weight: 700;
+  display: block;
+  margin-top: 8px;
+}
+.card-page #feedback-form input,
+.card-page #feedback-form select,
+.card-page #feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
+  font: inherit;
+}
+.card-page .radio-group {
+  margin: 10px 0 12px;
+  border: 0;
+  padding: 0;
+}
+.card-page .radio-group legend { font-weight: 700; margin-bottom: 6px; }
+.card-page .radio-group label { display: inline-block; margin-right: 14px; font-weight: 400; }
+.card-page #feedback-form button {
+  background: #28a745;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.card-page #feedback-form button:hover { background: #304c37; }
+
+/* Footer (card pages) */
+.card-page .footer {
+  text-align: center;
+  padding: 18px 12px;
+  color: #666;
+  background: transparent;
+}
